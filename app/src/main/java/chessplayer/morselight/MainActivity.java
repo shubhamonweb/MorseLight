@@ -20,6 +20,8 @@ import android.widget.TextView;
 
 import com.chessplayer.morsecodeflash.R;
 
+// import chessplayer.morselight.R;
+
 
 @SuppressWarnings("deprecation")
 public class MainActivity extends ActionBarActivity {
