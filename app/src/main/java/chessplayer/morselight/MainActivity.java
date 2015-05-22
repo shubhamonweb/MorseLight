@@ -1,15 +1,13 @@
 package chessplayer.morselight;
 
-import android.support.v7.app.ActionBarActivity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.hardware.Camera;
 import android.hardware.Camera.Parameters;
-import android.media.AudioTrack;
-import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,7 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.chessplayer.morsecodeflash.R;
+import chessplayer.morselight.R;
 
 // import chessplayer.morselight.R;
 
