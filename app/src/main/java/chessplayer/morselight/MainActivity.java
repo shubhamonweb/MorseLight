@@ -1,6 +1,5 @@
 package chessplayer.morselight;
 
-
 import android.support.v7.app.ActionBarActivity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -19,8 +18,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.chessplayer.morsecodeflash.R;
 
 
+@SuppressWarnings("deprecation")
 public class MainActivity extends ActionBarActivity {
     private Camera camera;
     private Parameters params;
@@ -61,7 +62,7 @@ public class MainActivity extends ActionBarActivity {
 //                Log.e("Camera Error. Failed to Open. Error: ", e.getMessage());
 //            }
 //        }
-        final TextView text = (TextView) findViewById(R.id.);
+        final TextView text = (TextView) findViewById(R.id.text);
         final EditText editText = (EditText) findViewById(R.id.edit_message);
         final Button button = (Button) findViewById(R.id.button_send);
         button.setOnClickListener(new View.OnClickListener() {
@@ -86,8 +87,7 @@ public class MainActivity extends ActionBarActivity {
             public void run() {
                 String selectedChar;
                 String convertedChar;
-                for (int i = 0; i < text.length(); i++)
-                {
+                for (int i = 0; i < text.length(); i++) {
 
                     //Select the next character
                     convertedChar = text.charAt(i) + "";
@@ -175,11 +175,13 @@ public class MainActivity extends ActionBarActivity {
         camera.stopPreview();
         isflashon = false;
     }
+
     @Override
     public void onPause() {
         super.onPause();
         camera.release();
     }
+
     @Override
     public void onResume() {
         super.onResume();
@@ -212,7 +214,7 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public static String encode (String toEncode) {
+    public static String encode(String toEncode) {
         String morse = toEncode;
 
         if (toEncode.equalsIgnoreCase("a"))
@@ -297,7 +299,7 @@ public class MainActivity extends ActionBarActivity {
         return morse;
     }
 
-    public static String decode (String toEncode) {
+    public static String decode(String toEncode) {
         String morse = toEncode;
 
         if (toEncode.equalsIgnoreCase(".- "))
@@ -377,13 +379,13 @@ public class MainActivity extends ActionBarActivity {
 
         return morse;
     }
-    public static String stringToMorse( String text ) {
+
+    public static String stringToMorse(String text) {
 
         String newText = "";
         String selectedChar;
         String convertedChar;
-        for (int i = 0; i < text.length(); i++)
-        {
+        for (int i = 0; i < text.length(); i++) {
 
             //Select the next character
             selectedChar = text.charAt(i) + "";
@@ -396,11 +398,9 @@ public class MainActivity extends ActionBarActivity {
                 newText = newText + "| ";
             }
             // Add the converted text, and add a space
-            else
-            {
+            else {
                 newText = newText + convertedChar;
-                if (!convertedChar.equals(" "))
-                {
+                if (!convertedChar.equals(" ")) {
                     newText = newText + " ";
                 }
             }
