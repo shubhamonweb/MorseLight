@@ -192,17 +192,17 @@ public class MainActivity extends ActionBarActivity {
                 camera = Camera.open();
                 params = camera.getParameters();
             } catch (RuntimeException e) {
-                Log.e("Camera Error. Failed to Open. Error: ", e.getMessage());
+//                Log.e("Camera Error. Failed to Open. Error: ", e.getMessage());
             }
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//        getMenuInflater().inflate(R.menu.main, menu);
+//        return true;
+//    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
